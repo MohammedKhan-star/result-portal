@@ -11,7 +11,7 @@ export default function Result() {
     try {
       setError("");
       const res = await axios.get(
-        `https://result-portal-5.onrender.com/result/${hallticket}`
+        `http://localhost:5000/result/${hallticket}`
       );
       setData(res.data);
     } catch {
