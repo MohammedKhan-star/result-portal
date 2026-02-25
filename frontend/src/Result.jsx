@@ -21,7 +21,7 @@ const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
   };
 
   return (
-    <div className="container">=
+    <div className="container">
      <div className="header">
         <h1>TS BOARD OF SECONDARY EDUCATION</h1>
         <h2>SSC PREFINAL EXAMINATION RESULTS 2026</h2>
@@ -39,6 +39,7 @@ const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
       {error && <h3 className="error">{error}</h3>}
 
       {data && (
+        <>
         <div id="memo" className="memo">
 
           <h2 className="memoTitle">SSC PREFINAL EXAMINATION MARKS MEMO</h2>
@@ -118,8 +119,7 @@ const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
           </button>
 
         </div>
-            )}
-            <div className="footer">
+        <div className="footer">
         © 2026 Board of Secondary Education, Telangana  
         <br />
         contact: <a href="mailto:contactprojectworksstudio@gmail.com">
@@ -133,7 +133,12 @@ const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
       
         
       </div>
-    </div>
+        
+        </>
+  
+            )}
+            </div>
+               
      
 
   
