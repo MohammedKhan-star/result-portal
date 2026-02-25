@@ -6,12 +6,12 @@ export default function Result() {
   const [hallticket, setHallticket] = useState("");
   const [data, setData] = useState(null);
   const [error, setError] = useState("");
-
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000"; 
   const getResult = async () => {
     try {
       setError("");
       const res = await axios.get(
-        `http://localhost:5000/result/${hallticket}`
+        `${API_URL}/result/${hallticket}`
       );
       setData(res.data);
     } catch {
