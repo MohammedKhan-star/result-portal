@@ -19,5 +19,9 @@ app.use("/upload", uploadRoute);
 app.use("/result", resultRoute);
 
 app.listen(process.env.PORT, () => {
-  console.log(`Server running on port ${process.env.PORT}`);
+  console.log(`Server running on port http://localhost:${process.env.PORT}`);
+});
+
+app.get("/", (req, res) => {
+  res.send("🎉 Result Portal API is running!");
 });

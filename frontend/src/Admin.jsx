@@ -8,7 +8,7 @@ function Admin() {
   // Fetch uploaded files from server
   const fetchFiles = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/files"); // Your backend endpoint to get file list
+      const res = await axios.get("https://result-portal-5.onrender.com/files"); // Your backend endpoint to get file list
       setFilesList(res.data); // Assuming res.data is an array of filenames
     } catch (err) {
       console.error(err);
@@ -26,7 +26,7 @@ function Admin() {
     formData.append("file", file);
 
     try {
-      await axios.post("http://localhost:5000/upload", formData);
+      await axios.post("https://result-portal-5.onrender.com/upload", formData);
       alert("Upload Successful");
       setFile(null);
       fetchFiles(); // Refresh file list
@@ -39,7 +39,7 @@ function Admin() {
   // Delete a file
   const deleteFile = async (filename) => {
     try {
-      await axios.delete(`http://localhost:5000/delete/${filename}`);
+      await axios.delete(`https://result-portal-5.onrender.com/delete/${filename}`);
       alert("File Deleted");
       fetchFiles(); // Refresh file list
     } catch (err) {
