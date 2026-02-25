@@ -21,15 +21,14 @@ const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
   };
 
   return (
-    <div className="container">
-
-      <div className="header">
+    <div className="container">=
+     <div className="header">
         <h1>TS BOARD OF SECONDARY EDUCATION</h1>
         <h2>SSC PREFINAL EXAMINATION RESULT 2026</h2>
       </div>
 
       <div className="searchBox">
-        <input
+        <input  
           placeholder="Enter Hall Ticket Number"
           value={hallticket}
           onChange={(e) => setHallticket(e.target.value)}
@@ -43,8 +42,8 @@ const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
         <div id="memo" className="memo">
 
           <h2 className="memoTitle">SSC PREFINAL EXAMINATION MARKS MEMO</h2>
-          <div className="studentInfo"> 
-          <p><b className="hallTicket">Hall Ticket:</b> {data.hallticket}<b className="name">Name:</b> {data.name}</p>
+          <div className="studentInfo0"> 
+          <p><b className="hallTicket">Hall Ticket:</b> {data.hallticket}<b className="name">  Name:</b> {data.name}</p>
           
           </div>
           <div className="studentInfo2">
@@ -119,7 +118,21 @@ const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
           </button>
 
         </div>
-      )}
+            )}
+            <div className="footer">
+        © 2026 Board of Secondary Education, Telangana  
+        <br />
+        Developed by <a href="https://your-portfolio-link.com" target="_blank">
+          ProjectWorksStudio-Founder & Software Engineer - Mohammed Khan
+        </a>
+        <br />
+        For more projects visit portfolio at <a href="https://mohammedkhan.dev" target="_blank">
+          https://mohammedkhan.dev
+        </a>
+      </div>
     </div>
+     
+
+  
   );
 }

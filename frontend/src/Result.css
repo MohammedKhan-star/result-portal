@@ -1,81 +1,135 @@
+/* ===== GLOBAL ===== */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #eef2f7;
-  justify-content: center;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: linear-gradient(135deg, #e8edf5, #cfd9e6);
+  min-height: 100vh;
 }
 
+/* ===== CONTAINER ===== */
 .container {
   text-align: center;
   padding: 20px;
-  color: #000000;
 }
 
+/* ===== HEADER (Board Style) ===== */
 .header {
-  background: #0b3d91;
+  background: linear-gradient(90deg, #0b3d91, #092c6b);
   color: white;
-  padding: 15px;
-  border-radius: 8px;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  animation: slideDown 0.8s ease;
 }
 
+.header h1 {
+  margin: 0;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+.header h2 {
+  margin: 6px 0 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* ===== SEARCH BOX ===== */
 .searchBox {
-  margin-top: 20px;
+  margin-top: 25px;
+  margin-bottom: 30px;
 }
 
 .searchBox input {
-  padding: 10px;
+  padding: 12px;
   width: 260px;
   font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
 }
 
 .searchBox button {
-  padding: 10px 20px;
+  padding: 12px 22px;
   margin-left: 10px;
   background: #0b3d91;
   color: white;
   border: none;
+  border-radius: 6px;
+  font-weight: bold;
   cursor: pointer;
+  margin-top: 5px;
+  transition: 0.3s;
+  margin-top: 15px;
 }
 
+.searchBox button:hover {
+  background: #062b6d;
+  transform: scale(1.05);
+}
+
+/* ===== ERROR ===== */
 .error {
   color: red;
+  margin-top: 10px;
 }
 
+/* ===== RESULT MEMO ===== */
 .memo {
-  background: white;
+  background: #fff;
   padding: 25px;
-  margin-top: 20px;
-  border-radius: 10px;
-  width: 620px;
+  margin-top: 30px;
+  border-radius: 12px;
+  width: 720px;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
-  color: #000000;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  animation: fadeIn 1s ease;
+  margin-bottom: 20px;
+  margin-right: 10px;
+
+}
+
+/* ===== MEMO TITLE ===== */
+.memoTitle {
+  border-bottom: 3px solid #0b3d91;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  color: #0b3d91;
+}
+
+/* ===== STUDENT INFO ===== */
+
+.studentInfo0 {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.studentInfo2 {
+  text-align: center;
+  margin-bottom: 5px;
   font-weight: bold;
 }
 
-.memoTitle {
-  border-bottom: 2px solid #0b3d91;
-  padding-bottom: 10px;
-}
-
+/* ===== TABLE ===== */
 table {
   width: 100%;
-  margin-top: 15px;
   border-collapse: collapse;
+  margin-top: 12px;
 }
 
 table th {
   background: #e6b01e;
-  color: rgb(15, 15, 15);
+  color: #000;
 }
 
 table th,
 table td {
-  padding: 8px;
-  border: 1px solid #111111;
+  padding: 10px;
+  border: 1px solid #222;
 }
 
+/* ===== RESULT COLORS ===== */
 .pass {
   color: green;
   font-weight: bold;
@@ -86,35 +140,83 @@ table td {
   font-weight: bold;
 }
 
-button {
-  margin-top: 15px;
-  padding: 10px 18px;
+/* ===== PRINT BUTTON ===== */
+.memo button {
+  margin-top: 18px;
+  padding: 12px 20px;
   background: #0b3d91;
   color: white;
   border: none;
+  border-radius: 6px;
+  font-size: 15px;
   cursor: pointer;
-}
-.studentInfo {
-    justify-content: space-between;
-}
-.hallTicket{
-    margin-right: 5px;
-    text-align: left;
-    justify-content: space-between;
-
-}
-.name{
-    margin-left: 5px;
-    text-align: right;
-    justify-content: space-between;
-}
-.studentInfo2{
-    text-align: center;
-    flex-direction: column;
+  transition: 0.3s;
 }
 
-@media (max-width: 500px) {
-  .memo {
-    width: 95%;
+.memo button:hover {
+  background: #062b6d;
+  transform: scale(1.05);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .memo {
+    width: 95%;
+    padding: 18px;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .header h2 {
+    font-size: 15px;
+  }
+
+  .searchBox input {
+    width: 70%;
+  }
+
+  
+}
+
+/* ===== PRINT STYLE ===== */
+@media print {
+  body {
+    background: white;
+  }
+
+  .searchBox,
+  .memo button {
+    display: none;
+  }
+
+  .memo {
+    box-shadow: none;
+    width: 100%;
+  }
+}
+
