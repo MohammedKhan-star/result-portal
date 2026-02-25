@@ -199,6 +199,7 @@ table td {
     width: 90%;
     padding: 18px;
     margin: auto;
+    
   }
 
   .header h1 {
@@ -212,9 +213,16 @@ table td {
   .searchBox input {
     width: 70%;
   }
+  .container{
+    margin-left: 0;
+    
+
+  }
+  
 
   
 }
+
 
 /* ===== PRINT STYLE ===== */
 @media print {
