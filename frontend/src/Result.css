@@ -37,7 +37,7 @@ body {
 /* ===== SEARCH BOX ===== */
 .searchBox {
   margin-top: 25px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .searchBox input {
@@ -60,7 +60,6 @@ body {
   cursor: pointer;
   margin-top: 5px;
   transition: 0.3s;
-  margin-top: 15px;
 }
 
 .searchBox button:hover {
